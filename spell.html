@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Number to words (number spelling)  - Online tools</title>
+    <!-- <link rel="stylesheet" href='static/css/main.css'> -->
+    <link rel="stylesheet" href="https://www.tools4noobs.com/css/main-combined.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <script>
+        // $('#div').mouseenter(function(){
+        //     alert('asfasfafssaf');
+        //     $(this).addClass("highlight");
+        //     });
+    
+        // $('#result').mouseleave(function(){
+        //     $(this).removeClass("bg-color: #cacd58");
+        //     });
+        $(document).ready(function(){
+            $(".span12").mouseenter(function(){
+                $(this).css("background", "blue");
+                });
+
+            $(".span12").mouseleave(function(){
+                $(this).css("background", "none");
+                });
+            });
+    </script>
+</head>
+
+<body>
+    <div class="span9">
+    <form action="" method="post" onsubmit="return do_submit()" class="form-inline">
+        <input type="hidden" name="action" value="ajax_number_spell_words">
+
+    <legend>
+        The tool spells out numbers (and currencies) in words. It supports 20 languages.
+    </legend>
+
+    <div class="span12">
+
+        <label for="number">Number:</label>
+        <input type="text" name="number" id="number" value="123456" maxlength="5">
+
+        <label for="type">Type:</label>
+
+        <select name="type" id="type">
+            <option value="0">number</option>
+            <option value="1">currency</option>
+        </select>
+    </div>
+        
+    <div class="span12" style="margin-top: 10px">
+        <label for="locale">Language: </label>
+        <select name="locale" id="locale" class="btn-medium">
+
+                <option value="bg">Bulgarian (Български)</option>
+                <option value="cs">Czech (Czech)</option>
+                <option value="de">German (Deutsch)</option>
+                <option value="dk">Danish (Dansk)</option>
+                <option value="en_GB">British English (British English)</option>
+                <option value="en_US" selected="selected">American English (American English)</option>
+                <option value="es">Spanish (Español)</option>
+                <option value="es_AR">Spanish (Español)</option>
+                <option value="et">Estonian (eesti keel)</option>
+                <option value="fr">French (Français)</option>
+                <option value="fr_BE">French (Belgian)</option>
+                <option value="he">Hebrew (עברית)</option>
+                <option value="hu_HU">Hungarian (Magyar)</option>
+                <option value="id">Indonesia Language (Bahasa Indonesia)</option>
+                <option value="it_IT">Italian (Italiano)</option>
+                <option value="lt">Lithuanian (lietuviškai)</option>
+                <option value="nl">Dutch (Nederlands)</option>
+                <option value="pl">Polish (polski)</option>
+                <option value="pt_BR">Brazilian Portuguese (Português Brasileiro)</option>
+                <option value="ru">Russian (Русский)</option>
+                <option value="sv">Swedish (Svenska)</option>
+            </select>
+    </div>
+
+        <div style="text-align: center; margin: auto; margin-top: 10px">
+        <input type="submit" value="Spell number" class="btn btn-primary">
+        </div>
+
+        </form>
+        
+        <div id="result"><div class="well">one hundred twenty-three thousand four hundred fifty-six</div></div>
+
+    </div>
+    
+</body>
+
+
+
+</html>
